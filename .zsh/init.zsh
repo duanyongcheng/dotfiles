@@ -1,0 +1,10 @@
+alias c=clear
+alias ez="nvim ~/.zshrc"
+alias sz="source ~/.zshrc"
+alias ls='lsd -l'
+alias l='lsd -l'
+alias ll='lsd -l'
+alias zj='zellij'
+alias v='nvim'
+alias n='neofetch'
+alias py='python3'
