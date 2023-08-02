@@ -37,7 +37,7 @@ export TERM=alacritty
 # Then, source plugins and add commands to $PATH
 # zplug load --verbose
 source ~/.p10k.dream.zsh
-export PATH=$PATH:/Users/bary/.local/share/bob/nvim-bin:/Applications/Docker.app/Contents/Resources/bin
+export PATH=$PATH:~/.local/share/bob/nvim-bin:/Applications/Docker.app/Contents/Resources/bin
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 zplug load
