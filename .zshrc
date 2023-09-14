@@ -20,7 +20,7 @@ zplug "zsh-users/zsh-autosuggestions"
 # Can manage local plugins
 zplug "~/.zsh/*.zsh", from:local
 
-zplug romkatv/powerlevel10k, as:theme, depth:1
+# zplug romkatv/powerlevel10k, as:theme, depth:1
 
 
 # Install plugins if there are plugins that have not been installed
@@ -31,15 +31,15 @@ if ! zplug check --verbose; then
     fi
 fi
 
-# export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
-export TERM=alacritty
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+# export TERM=alacritty
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Then, source plugins and add commands to $PATH
 # zplug load --verbose
-source ~/.p10k.dream.zsh
+# source ~/.p10k.dream.zsh
 export PATH=$PATH:~/.local/share/bob/nvim-bin:/Applications/Docker.app/Contents/Resources/bin:~/.cargo/bin
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 zplug load
 # eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/multiverse-neon.omp.json)"
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
