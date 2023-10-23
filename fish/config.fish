@@ -32,9 +32,13 @@ switch $(uname)
   case '*'
     set -x OSTYPE 'UNKNOWN'
 end
-fish_add_path ~/.cargo/bin/
+
+if [ $OSTYPE = 'Linux' ]
+  export PATH="$HOME/.cargo/bin:$PATH"
+end
 
 if [ $OSTYPE = 'macOS' ]
+  fish_add_path ~/.cargo/bin/
   fish_add_path /opt/homebrew/bin/
   fish_add_path ~/.local/share/bob/nvim-bin
   [ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
