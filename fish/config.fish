@@ -43,11 +43,11 @@ function fish_greeting -d "Theo's Custom Greetin Msg"
   # Getting the battery info
   set -l batlv -1
   if [ $OSTYPE = 'Linux' ]
-    if test -a /sys/class/power_supply/BAT0/capacity
-      set batlv $(cat /sys/class/power_supply/BAT0/capacity)
-    elif -a /sys/class/power_supply/BAT1/capacity
-      set batlv $(cat /sys/class/power_supply/BAT1/capacity)
-    end
+    # if test -a /sys/class/power_supply/BAT0/capacity
+    #   set batlv $(cat /sys/class/power_supply/BAT0/capacity)
+    # elif -a /sys/class/power_supply/BAT1/capacity
+    #   set batlv $(cat /sys/class/power_supply/BAT1/capacity)
+    # end
   else if command -v pmset &> /dev/null
     set batlv $(pmset -g batt | grep -Eo "\d+%" | cut -d% -f1)
   end
