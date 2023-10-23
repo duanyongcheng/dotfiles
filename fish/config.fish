@@ -20,6 +20,8 @@ set -gx DOT_DIR ~/dotfiles
 set -gx QUICK_NOTE_PATH "$CACHE_DIR/quick-note.md"
 set -gx DAILY_WRITING_DIR "$CACHE_DIR/dw-$(date +'%Y')"
 
+export https_proxy=http://192.168.110.2:8234;export http_proxy=http://192.168.110.2:8234;export all_proxy=socks5://192.168.110.2:8235
+
 switch $(uname)
   case "Linux"
     set -x OSTYPE 'Linux'
