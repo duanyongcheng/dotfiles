@@ -34,7 +34,7 @@ switch $(uname)
 end
 
 if [ $OSTYPE = 'Linux' ]
-  export PATH="$HOME/.cargo/bin:$PATH"
+  export PATH="$HOME/.cargo/bin:/usr/bin:$PATH"
 end
 
 if [ $OSTYPE = 'macOS' ]
