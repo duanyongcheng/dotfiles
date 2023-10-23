@@ -7,31 +7,34 @@ local config = {}
 if wezterm.config_builder then config = wezterm.config_builder() end
 
 local function scheme_for_appearance(appearance)
-	if appearance:find("Dark") then
-		return "Catppuccin Frappe"
-	else
-		return "Catppuccin Frappe"
-	end
+  if appearance:find("Dark") then
+    return "Catppuccin Frappe"
+  else
+    return "Catppuccin Frappe"
+  end
 end
 
 -- Sttings
 config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 config.font = wezterm.font_with_fallback({
-	{ family = "FiraMono Nerd Font",       scale = 1.4 },
-	{ family = "FantasqueSansM Nerd Font", scale = 1.2 },
+  { family = "Andale Mono",              scale = 1.5 },
+  { family = "FiraMono Nerd Font",       scale = 1.4 },
+  { family = "FantasqueSansM Nerd Font", scale = 1.2 },
 })
-config.window_background_opacity = 0.9
+config.window_background_opacity = 0.8
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
 config.default_workspace = "main"
 
+-- config.native_macos_fullscreen_mode = true
+
 config.hide_tab_bar_if_only_one_tab = true
 
 -- Dim inactive panes
 config.inactive_pane_hsb = {
-	saturation = 0.24,
-	brightness = 0.5
+  saturation = 0.24,
+  brightness = 0.5
 }
 
 config.initial_rows = 40
@@ -45,16 +48,15 @@ config.keys = {
   { key = "a",          mods = "LEADER|CTRL", action = act.SendKey { key = "a", mods = "CTRL" } },
   { key = "c",          mods = "LEADER",      action = act.ActivateCopyMode },
   { key = "phys:Space", mods = "LEADER",      action = act.ActivateCommandPalette },
-
-  { key = "h",          mods = "LEADER|CTRL",      action = act.SendKey { key = "h" , mods = "CTRL"} },
+  { key = "h",          mods = "LEADER|CTRL", action = act.SendKey { key = "h", mods = "CTRL" } },
   -- { key = "j",          mods = "CTRL",      action = act.ActivatePaneDirection("Down") },
   -- { key = "k",          mods = "CTRL",      action = act.ActivatePaneDirection("Up") },
   -- { key = "l",          mods = "CTRL",      action = act.ActivatePaneDirection("Right") },
   --
 
   -- Pane keybindings
-  { key = "-",          mods = "CTRL",      action = act.SplitVertical { domain = "CurrentPaneDomain" } },
-  { key = "|",          mods = "CTRL|SHIFT",      action = act.SplitHorizontal { domain = "CurrentPaneDomain" } },
+  { key = "-",          mods = "CTRL",        action = act.SplitVertical { domain = "CurrentPaneDomain" } },
+  { key = "|",          mods = "CTRL|SHIFT",  action = act.SplitHorizontal { domain = "CurrentPaneDomain" } },
   { key = "h",          mods = "LEADER",      action = act.ActivatePaneDirection("Left") },
   { key = "j",          mods = "LEADER",      action = act.ActivatePaneDirection("Down") },
   { key = "k",          mods = "LEADER",      action = act.ActivatePaneDirection("Up") },
@@ -68,8 +70,8 @@ config.keys = {
 
   -- Tab keybindings
   { key = "t",          mods = "LEADER",      action = act.SpawnTab("CurrentPaneDomain") },
-  { key = "[",          mods = "CTRL",      action = act.ActivateTabRelative(-1) },
-  { key = "]",          mods = "CTRL",      action = act.ActivateTabRelative(1) },
+  { key = "[",          mods = "CTRL",        action = act.ActivateTabRelative(-1) },
+  { key = "]",          mods = "CTRL",        action = act.ActivateTabRelative(1) },
   { key = "n",          mods = "LEADER",      action = act.ShowTabNavigator },
   {
     key = "e",
