@@ -30,14 +30,13 @@ switch $(uname)
   case '*'
     set -x OSTYPE 'UNKNOWN'
 end
+fish_add_path ~/.cargo/bin/
 
 if [ $OSTYPE = 'macOS' ]
   fish_add_path /opt/homebrew/bin/
   fish_add_path ~/.local/share/bob/nvim-bin
-  fish_add_path ~/.cargo/bin/
+  [ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
 end
-
-[ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
 
 function fish_greeting -d "Theo's Custom Greetin Msg"
   # Getting the battery info
