@@ -35,6 +35,7 @@ end
 
 if [ $OSTYPE = 'Linux' ]
   export PATH="$HOME/.cargo/bin:/usr/bin:$PATH"
+  fish_add_path ~/.local/share/bob/nvim-bin
 end
 
 if [ $OSTYPE = 'macOS' ]
