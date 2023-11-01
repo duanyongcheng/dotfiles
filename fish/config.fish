@@ -32,11 +32,13 @@ switch $(uname)
 end
 
 if [ $OSTYPE = 'Linux' ]
+  nvm use stable
   export PATH="$HOME/.cargo/bin:/usr/bin:$PATH"
   fish_add_path ~/.local/share/bob/nvim-bin
 end
 
 if [ $OSTYPE = 'macOS' ]
+  nvm use sign
   fish_add_path ~/.cargo/bin/
   fish_add_path /opt/homebrew/bin/
   fish_add_path ~/.local/share/bob/nvim-bin
@@ -84,8 +86,6 @@ function fish_greeting -d "Theo's Custom Greetin Msg"
   else
     set batcolo $red
   end
-
-  nvm use sign
 
   # Collection of Oliver ASCII arts
   set -l olivers \
