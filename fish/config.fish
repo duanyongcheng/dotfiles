@@ -33,6 +33,9 @@ end
 
 if [ $OSTYPE = 'Linux' ]
   nvm use stable
+  export https_proxy=http://192.168.110.64:7890;
+  export http_proxy=http://192.168.110.64:7890;
+  export all_proxy=socks5://192.168.110.64:7891
   export PATH="$HOME/.cargo/bin:/usr/bin:$PATH"
   fish_add_path ~/.local/share/bob/nvim-bin
 end
