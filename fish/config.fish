@@ -41,7 +41,7 @@ if [ $OSTYPE = 'Linux' ]
 end
 
 if [ $OSTYPE = 'macOS' ]
-  nvm use sign
+  nvm use stable
   fish_add_path ~/.cargo/bin/
   fish_add_path /opt/homebrew/bin/
   fish_add_path ~/.local/share/bob/nvim-bin
