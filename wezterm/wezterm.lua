@@ -19,8 +19,8 @@ end
 -- Sttings
 config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 config.font = wezterm.font_with_fallback({
+	{ family = "FiraCode Nerd Font", scale = 1.4 },
 	{ family = "Andale Mono", scale = 1.3 },
-	{ family = "FiraMono Nerd Font", scale = 1.2 },
 	{ family = "FantasqueSansM Nerd Font", scale = 1.2 },
 })
 config.window_background_opacity = 1
@@ -39,8 +39,8 @@ config.inactive_pane_hsb = {
 	brightness = 0.5,
 }
 
-config.initial_rows = 40
-config.initial_cols = 120
+config.initial_rows = 60
+config.initial_cols = 180
 config.default_cursor_style = "BlinkingBar"
 
 -- Keys

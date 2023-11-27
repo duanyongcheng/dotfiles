@@ -33,9 +33,6 @@ end
 
 if [ $OSTYPE = 'Linux' ]
   nvm use stable
-  export https_proxy=http://192.168.110.166:7222;
-  export http_proxy=http://192.168.110.166:7222;
-  export all_proxy=socks5://192.168.110.166:7221;
   export PATH="$HOME/.cargo/bin:/usr/bin:$PATH"
   fish_add_path ~/.local/share/bob/nvim-bin
 end
@@ -184,3 +181,10 @@ if status is-interactive
   set fish_vi_force_cursor
 end
 
+
+# pnpm
+set -gx PNPM_HOME "/Users/bary/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
