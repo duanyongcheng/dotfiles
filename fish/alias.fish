@@ -12,9 +12,11 @@ alias weather "curl 'https://wttr.in'"
 alias sc "source ~/.config/fish/config.fish"
 alias lg "lazygit"
 alias gcz "gitcz"
+alias n "neofetch"
+alias ds "docker stats"
 
 alias l1="cd \"$CACHE_DIR\""
-alias dw="vim \"$DAILY_WRITING_DIR/index.md\""
+alias dw="nvim \"$DAILY_WRITING_DIR/index.md\""
 alias dot="cd \"$DOT_DIR\""
 
 function cdf -d "Navigate to directories using fzf"
