@@ -139,7 +139,7 @@ function fish_greeting -d "Theo's Custom Greetin Msg"
       |  O        \___/  |
     ~^~^~^~^~^~^~^~^~^~^~^~^~
     '
-  set -l oliver "$(random choice $olivers)" # will break new line without the quotes
+  # set -l oliver "$(random choice $olivers)" # will break new line without the quotes
 
   # Other information
   set -l my_hostname $(hostname -s) # -s to trim domain, hostname variable is taken by Fish

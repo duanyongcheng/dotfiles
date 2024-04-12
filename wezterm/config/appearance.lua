@@ -60,8 +60,8 @@ return {
    integrated_title_button_style = 'Windows',
    integrated_title_button_color = 'auto',
    integrated_title_button_alignment = 'Right',
-   initial_cols = 120,
-   initial_rows = 40,
+   initial_cols = 200,
+   initial_rows = 60,
    window_padding = {
       left = 5,
       right = 10,
