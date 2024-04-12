@@ -16,6 +16,7 @@ alias n "neofetch"
 alias ds "docker stats"
 alias vf "nvim ~/dotfiles/fish/config.fish"
 alias v "nvim"
+alias jo "joshuto"
 
 alias l1="cd \"$CACHE_DIR\""
 alias dw="nvim \"$DAILY_WRITING_DIR/index.md\""
