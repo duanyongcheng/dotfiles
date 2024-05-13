@@ -23,8 +23,8 @@ local keys = {
    { key = 'f', mods = mod.SUPER, action = act.Search({ CaseInSensitiveString = '' }) },
 
    -- copy/paste --
-   { key = 'c', mods = 'CTRL|SHIFT', action = act.CopyTo('Clipboard') },
-   { key = 'v', mods = 'CTRL|SHIFT', action = act.PasteFrom('Clipboard') },
+   { key = 'c', mods = mod.SUPER_REV, action = act.CopyTo('Clipboard') },
+   { key = 'v', mods = mod.SUPER, action = act.PasteFrom('Clipboard') },
 
    -- tabs --
    -- tabs: spawn+close
@@ -200,7 +200,7 @@ local mouse_bindings = {
 return {
    disable_default_key_bindings = true,
    disable_default_mouse_bindings = true,
-   leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 },
+   leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 },
    keys = keys,
    key_tables = key_tables,
    mouse_bindings = mouse_bindings,

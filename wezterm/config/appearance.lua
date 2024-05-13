@@ -11,7 +11,7 @@ return {
 
    -- color scheme
    -- colors = colors,
-   color_scheme = 'Gruvbox dark, medium (base16)',
+   color_scheme = 'Grape (Gogh)',
 
    -- background
    window_background_opacity = 1.00,
