@@ -1,9 +1,9 @@
 local wezterm = require('wezterm')
 local function scheme_for_appearance(appearance)
    if appearance:find('Dark') then
-      return 'Catppuccin Frappe'
+      return 'Catppuccin Mocha'
    else
-      return 'Catppuccin Frappe'
+      return 'Dracula (base16)'
    end
 end
 

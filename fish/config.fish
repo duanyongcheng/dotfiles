@@ -33,7 +33,8 @@ end
 
 if [ $OSTYPE = Linux ]
     nvm use stable
-    export PATH="$HOME/.cargo/bin:/usr/bin:$PATH"
+    export NIX_PATH="~/.nix-defexpr/channels_root/nixpkgs"
+    export PATH="$HOME/.cargo/bin:/usr/bin:/nix/store:$NIX_PATH:$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh:$PATH"
     fish_add_path ~/.local/share/bob/nvim-bin
 end
 

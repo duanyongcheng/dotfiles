@@ -1,5 +1,5 @@
 return {
-   window_background_opacity = 0.9,
+   window_background_opacity = 1,
    window_decorations = 'RESIZE',
    window_close_confirmation = 'AlwaysPrompt',
    scrollback_lines = 3000,
@@ -13,7 +13,7 @@ return {
    },
 
    initial_rows = 50,
-   initial_cols = 120,
+   initial_cols = 180,
 
    default_cursor_style = 'BlinkingBar',
 }
