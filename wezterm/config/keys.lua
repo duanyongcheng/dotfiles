@@ -2,11 +2,11 @@ local wezterm = require('wezterm')
 local act = wezterm.action
 return {
    -- Keys
-   leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 },
+   -- leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 },
    keys = {
       -- Send C-a when pressing C-a twice
       { key = 'a', mods = 'LEADER|CTRL', action = act.SendKey({ key = 'a', mods = 'CTRL' }) },
-      { key = 'c', mods = 'LEADER', action = act.ActivateCopyMode },
+      { key = 'c', mods = 'CTRL|SHIFT', action = act.ActivateCopyMode },
       { key = 'phys:Space', mods = 'LEADER', action = act.ActivateCommandPalette },
       { key = 'h', mods = 'LEADER|CTRL', action = act.SendKey({ key = 'h', mods = 'CTRL' }) },
       -- { key = "j",          mods = "CTRL",      action = act.ActivatePaneDirection("Down") },
@@ -72,5 +72,78 @@ return {
 
       -- full screen
       { key = 'f', mods = 'LEADER', action = act.ToggleFullScreen },
+      -- tmux
+      {
+         key = '1',
+         mods = 'CMD',
+         action = wezterm.action.Multiple({
+            wezterm.action.SendKey({mods = 'CTRL', key = 'a'}),
+            wezterm.action.SendKey({key = '1'}),
+         }),
+      },
+      {
+         key = '2',
+         mods = 'CMD',
+         action = wezterm.action.Multiple({
+            wezterm.action.SendKey({mods = 'CTRL', key = 'a'}),
+            wezterm.action.SendKey({key = '2'}),
+         }),
+      },
+      {
+         key = '3',
+         mods = 'CMD',
+         action = wezterm.action.Multiple({
+            wezterm.action.SendKey({mods = 'CTRL', key = 'a'}),
+            wezterm.action.SendKey({key = '3'}),
+         }),
+      },
+      {
+         key = '4',
+         mods = 'CMD',
+         action = wezterm.action.Multiple({
+            wezterm.action.SendKey({mods = 'CTRL', key = 'a'}),
+            wezterm.action.SendKey({key = '4'}),
+         }),
+      },
+      {
+         key = '5',
+         mods = 'CMD',
+         action = wezterm.action.Multiple({
+            wezterm.action.SendKey({mods = 'CTRL', key = 'a'}),
+            wezterm.action.SendKey({key = '5'}),
+         }),
+      },
+      {
+         key = '6',
+         mods = 'CMD',
+         action = wezterm.action.Multiple({
+            wezterm.action.SendKey({mods = 'CTRL', key = 'a'}),
+            wezterm.action.SendKey({key = '6'}),
+         }),
+      },
+      {
+         key = '7',
+         mods = 'CMD',
+         action = wezterm.action.Multiple({
+            wezterm.action.SendKey({mods = 'CTRL', key = 'a'}),
+            wezterm.action.SendKey({key = '7'}),
+         }),
+      },
+      {
+         key = '8',
+         mods = 'CMD',
+         action = wezterm.action.Multiple({
+            wezterm.action.SendKey({mods = 'CTRL', key = 'a'}),
+            wezterm.action.SendKey({key = '8'}),
+         }),
+      },
+      {
+         key = '9',
+         mods = 'CMD',
+         action = wezterm.action.Multiple({
+            wezterm.action.SendKey({mods = 'CTRL', key = 'a'}),
+            wezterm.action.SendKey({key = '9'}),
+         }),
+      },
    },
 }

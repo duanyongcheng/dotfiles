@@ -45,10 +45,7 @@ if [ $OSTYPE = macOS ]
     fish_add_path ~/.local/share/bob/nvim-bin
     fish_add_path /Applications/Docker.app/Contents/Resources/bin
     [ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
-    # export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
-    # export https_proxy=http://127.0.0.1:6152
-    # export http_proxy=http://127.0.0.1:6152
-    # export all_proxy=socks5://127.0.0.1:6153
+    export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152;export all_proxy=socks5://127.0.0.1:6153
 end
 
 function fish_greeting -d "Theo's Custom Greetin Msg"

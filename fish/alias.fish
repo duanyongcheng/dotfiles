@@ -21,6 +21,8 @@ alias jo joshuto
 alias l1="cd \"$CACHE_DIR\""
 alias dw="nvim \"$DAILY_WRITING_DIR/index.md\""
 alias dot="cd \"$DOT_DIR\""
+alias uninstall_yabai="brew uninstall yabai skhd borders sketchybar"
+alias install_yabai="brew install yabai skhd borders sketchybar"
 
 function cdf -d "Navigate to directories using fzf"
     set selected $(find * -maxdepth 1 -type d 2>/dev/null | fzf \
