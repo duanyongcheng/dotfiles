@@ -2,7 +2,7 @@ local wezterm = require('wezterm')
 local act = wezterm.action
 return {
    -- Keys
-   -- leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 },
+   leader = { key = 'b', mods = 'CTRL', timeout_milliseconds = 1000 },
    keys = {
       -- Send C-a when pressing C-a twice
       { key = 'a', mods = 'LEADER|CTRL', action = act.SendKey({ key = 'a', mods = 'CTRL' }) },
