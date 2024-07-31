@@ -1,4 +1,4 @@
-function tmux-session
+function tms
     # 获取所有会话并通过 fzf 选择
     set sessions (tmux ls 2>/dev/null)
     # 检查是否有会话
