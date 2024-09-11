@@ -47,6 +47,8 @@ if [ $OSTYPE = macOS ]
     [ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
     export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152;export all_proxy=socks5://127.0.0.1:6153
     export AGENT_DEBUG_OVERRIDE_PROXY_URL=https://cocopilot.org GITHUB_COPILOT_OVERRIDE_PROXY_URL=https://cocopilot.org AGENT_DEBUG_OVERRIDE_CAPI_URL=https://cocopilot.org GITHUB_COPILOT_OVERRIDE_CAPI_URL=https://cocopilot.org
+    export JAVA_HOME="/opt/homebrew/Cellar/openjdk@11/11.0.24/libexec/openjdk.jdk/Contents/Home"
+
 end
 
 function fish_greeting -d "Theo's Custom Greetin Msg"
