@@ -1,5 +1,5 @@
 function nvm-fast
-	set -q NVM_DIR ; or set -l NVM_DIR ~/.nvm
+	set -q NVM_DIR ; or set -l NVM_DIR ~/.config/nvm
 	set -l brigand_nvm_fish_path $NVM_DIR/versions/node
 	if test (count $argv[1]) -lt 1
 		echo 'nvm-fast: at least one argument is required'
@@ -50,4 +50,3 @@ function nvm
 	end
 	nvm-fast $argv
 end
-
