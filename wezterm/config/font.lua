@@ -1,6 +1,6 @@
 local wezterm = require('wezterm')
 -- FiraCode Nerd Font
-local font = 'fira code'
+local font = 'Fira Code'
 
 return {
    font = wezterm.font(font),

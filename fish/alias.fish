@@ -25,6 +25,10 @@ alias dot="cd \"$DOT_DIR\""
 alias uninstall_yabai="brew uninstall yabai skhd borders sketchybar"
 alias install_yabai="brew install yabai skhd borders sketchybar"
 
+
+# pnpm
+alias pm="pnpm "
+
 function cdf -d "Navigate to directories using fzf"
     set selected $(find * -maxdepth 1 -type d 2>/dev/null | fzf \
     --reverse --border=rounded --cycle --height=50% \

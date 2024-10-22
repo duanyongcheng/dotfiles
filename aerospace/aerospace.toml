@@ -191,8 +191,8 @@ if.app-id = 'com.colliderli.iina'
 run = "move-node-to-workspace I"
 
 [[on-window-detected]]
-if.app-id = 'com.google.Chrome.app.pdkbjpfclpbadojflpljldiamdobndgp'
-run = "move-node-to-workspace G"
+if.app-id = 'xyz.chatboxapp.app'
+run = "layout floating"
 
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.intellij'
@@ -201,3 +201,15 @@ run = "move-node-to-workspace C"
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = "move-node-to-workspace E"
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Music'
+run = "move-node-to-workspace M"
+
+[[on-window-detected]]
+if.app-id = 'com.tencent.wwmapp'
+run = "move-node-to-workspace 9"
+
+[[on-window-detected]]
+if.app-id = 'com.electron.app'
+run = "layout floating"
