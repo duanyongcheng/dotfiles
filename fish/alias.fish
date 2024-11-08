@@ -6,8 +6,9 @@
 # Functions and aliases (which are just a wrapper for functions in Fish)
 
 alias c clear
-alias l "lsd -Alh" # [A]lmost all (except . && ..), [l]ist, [h]: display unit
+alias l "lsd -lh" # [A]lmost all (except . && ..), [l]ist, [h]: display unit
 alias ls lsd # [A]lmost all (except . && ..), [l]ist, [h]: display unit
+alias la "lsd -Alh"
 alias weather "curl 'https://wttr.in'"
 alias sc "source ~/.config/fish/config.fish"
 alias lg lazygit
@@ -24,6 +25,23 @@ alias dw="nvim \"$DAILY_WRITING_DIR/index.md\""
 alias dot="cd \"$DOT_DIR\""
 alias uninstall_yabai="brew uninstall yabai skhd borders sketchybar"
 alias install_yabai="brew install yabai skhd borders sketchybar"
+
+# eza (better `ls`)
+# ------------------------------------------------------------------------------
+if command -v eza >/dev/null 2>&1
+  alias l="eza --icons"
+  alias ls="eza --icons"
+  alias ll="eza -lg --icons"
+  alias la="eza -lag --icons"
+  alias lt="eza -lTg --icons"
+  alias lt1="eza -lTg --level=1 --icons"
+  alias lt2="eza -lTg --level=2 --icons"
+  alias lt3="eza -lTg --level=3 --icons"
+  alias lta="eza -lTag --icons"
+  alias lta1="eza -lTag --level=1 --icons"
+  alias lta2="eza -lTag --level=2 --icons"
+  alias lta3="eza -lTag --level=3 --icons"
+end
 
 
 # pnpm
