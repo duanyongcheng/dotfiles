@@ -45,6 +45,7 @@ if [ $OSTYPE = macOS ]
     fish_add_path /opt/homebrew/Cellar/nushell/0.97.1/bin
     fish_add_path ~/.local/share/bob/nvim-bin
     fish_add_path /Applications/Docker.app/Contents/Resources/bin
+    fish_add_path $HOME/.config/tmux/plugins/tmuxifier/bin
     [ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
     export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152;export all_proxy=socks5://127.0.0.1:6153
     export AGENT_DEBUG_OVERRIDE_PROXY_URL=https://cocopilot.org GITHUB_COPILOT_OVERRIDE_PROXY_URL=https://cocopilot.org AGENT_DEBUG_OVERRIDE_CAPI_URL=https://cocopilot.org GITHUB_COPILOT_OVERRIDE_CAPI_URL=https://cocopilot.org
@@ -210,3 +211,4 @@ end
 
 
 starship init fish | source
+eval (tmuxifier init - fish)
