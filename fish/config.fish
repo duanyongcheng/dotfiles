@@ -33,6 +33,7 @@ end
 
 if [ $OSTYPE = Linux ]
     nvm use stable
+    fish_add_path $HOME/.config/tmux/plugins/tmuxifier/bin
     export NIX_PATH="~/.nix-defexpr/channels_root/nixpkgs"
     export PATH="$HOME/.cargo/bin:/usr/bin:/nix/store:$NIX_PATH:$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh:$PATH"
     fish_add_path ~/.local/share/bob/nvim-bin
