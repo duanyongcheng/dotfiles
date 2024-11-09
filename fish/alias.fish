@@ -34,13 +34,13 @@ if command -v eza >/dev/null 2>&1
   alias ll="eza -lg --icons"
   alias la="eza -lag --icons"
   alias lt="eza -lTg --icons"
-  alias lt1="eza -lTg --level=1 --icons"
-  alias lt2="eza -lTg --level=2 --icons"
-  alias lt3="eza -lTg --level=3 --icons"
-  alias lta="eza -lTag --icons"
-  alias lta1="eza -lTag --level=1 --icons"
-  alias lta2="eza -lTag --level=2 --icons"
-  alias lta3="eza -lTag --level=3 --icons"
+  alias lt1="eza -lTg --level=1 --icons --ignore-glob='node_modules'"
+  alias lt2="eza -lTg --level=2 --icons --ignore-glob='node_modules'"
+  alias lt3="eza -lTg --level=3 --icons --ignore-glob='node_modules'"
+  alias lta="eza -lTag --icons --ignore-glob='node_modules'"
+  alias lta1="eza -lTag --level=1 --icons --ignore-glob='node_modules'"
+  alias lta2="eza -lTag --level=2 --icons --ignore-glob='node_modules'"
+  alias lta3="eza -lTag --level=3 --icons --ignore-glob='node_modules'"
 end
 
 
