@@ -23,6 +23,8 @@ alias python python3
 alias l1="cd \"$CACHE_DIR\""
 alias dw="nvim \"$DAILY_WRITING_DIR/index.md\""
 alias dot="cd \"$DOT_DIR\""
+alias gpa="git push origin main; git push github main"
+alias gp="git push"
 alias uninstall_yabai="brew uninstall yabai skhd borders sketchybar"
 alias install_yabai="brew install yabai skhd borders sketchybar"
 
